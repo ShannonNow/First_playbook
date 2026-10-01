@@ -1,0 +1,7 @@
+[rocky9]
+master01 ansible_host=10.0.0.98
+
+[rocky9:vars]
+ansible_user=ansible
+ansible_ssh_pass=mypass
+ansible_become_pass=mypass

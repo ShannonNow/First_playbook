@@ -1,0 +1,12 @@
+---
+- name: Write a simple file using Ansible
+  hosts: master01
+  gather_facts: false
+  tasks:
+    - name: Write file test.txt to tmp directory
+      ansible.builtin.lineinfile:
+        path: /tmp/test.txt
+        line: "This is a test file created by Ansible. Just a quick and simple test."
+        create: true
+        mode: '0644'
+        

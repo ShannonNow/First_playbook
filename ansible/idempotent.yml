@@ -1,0 +1,8 @@
+---
+- name: Testing idempotence
+  hosts: master01
+  gather_facts: false
+  tasks:
+    - name: Use shell to echo hello to hello.txt
+      ansible.builtin.shell: echo "hello" > /tmp/hello.txt
+      mode: '0644'
